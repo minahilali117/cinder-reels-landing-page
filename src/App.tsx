@@ -1,24 +1,20 @@
-import Header from './components/Header'
-import Hero from './components/Hero'
-import LaunchSection from './components/LaunchSection'
-import Video from './components/Video'
-import Features from './components/Features'
-import SignupPerks from './components/SignupPerks'
-import FAQ from './components/FAQ'
-
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import LandingPage from "./pages/LandingPage";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import CookieConsent from "./components/CookieConsent";
 
 function App() {
   return (
-    <div className="relative w-screen overflow-x-hidden">
-      <Header />
-      <Hero />
-      <LaunchSection />
-      <Video/>
-      <Features />
-      <SignupPerks />
-      <FAQ />
-    </div>
-  )
+    <>
+      <Router>
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        </Routes>
+        <CookieConsent />
+      </Router>
+    </>
+  );
 }
 
-export default App
+export default App;

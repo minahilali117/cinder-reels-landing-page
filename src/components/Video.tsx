@@ -97,7 +97,7 @@ const Video = () => {
              onMouseEnter={() => setShowButton(true)}
              style={{ touchAction: 'pan-y' }}>
             <video ref={videoRef} className="relative md:w-full h-full object-cover z-0 rounded-[8.3px] md:rounded-3xl" loop poster={Thumbnail} onEnded={() => { setIsPlaying(false); }} onTimeUpdate={handleTimeUpdate} onLoadedMetadata={handleLoadedMetadata} onPause={handleVideoPause} onPlay={handleVideoPlay} playsInline>
-              <source src="http://cinderreels.s3.us-east-1.amazonaws.com/CinderReels+Holding+page+video+(revised).mp4" type="video/mp4"/> ur browser does not support the video tag  
+              <source src="https://cinderreels.s3.us-east-1.amazonaws.com/CinderReels+Holding+page+video+(revised).mp4" type="video/mp4"/> ur browser does not support the video tag  
             </video>
 
             {/* play/pause */}

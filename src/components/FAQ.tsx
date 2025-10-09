@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import arrow from '../assets/faq arrow.png';
+import { Link } from 'react-router-dom';
 const FAQ = () => {
   const [openIndices, setOpenIndices] = useState<number[]>([]);
 
@@ -35,8 +36,9 @@ const FAQ = () => {
             </div>
           ))}
         </div>
-        <div className='border-t-[1px] border-[#3C3C3C] mt-[40px] md:mt-[60px] md:px-6'>
-          <div className="text-center pb-[27px] pt-[24px] md:pb-[44px] md:pt-[30px] font-normal text-sm"> © 2025 Cinder Reels. All rights reserved.</div>
+        <div className='border-t-[1px] border-[#3C3C3C] mt-[40px] md:mt-[60px] md:px-6 space-y-4'>
+          <div className="text-center pt-[24px]  md:pt-[30px] font-normal text-sm"> © 2025 Cinder Reels. All rights reserved.</div>
+          <p className="text-center text-sm underline text-blue-500 pb-[27px] md:pb-[44px]"><Link to="/privacy-policy" >Privacy & Cookie Policy</Link></p>
         </div>
       </div>
     </div>
